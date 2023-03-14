@@ -60,17 +60,17 @@ class NASGNN(torch.nn.Module):
 
         self.cells = nn.ModuleList()
 
-        self.cells.append(self.build_conv_model(cfg.gnn.node0)(dim_in, dim_in))
-        self.cells.append(self.build_conv_model(cfg.gnn.node1)(dim_in, dim_in))
-        self.cells.append(self.build_conv_model(cfg.gnn.node2)(dim_in, dim_in))
-        self.cells.append(self.build_conv_model(cfg.gnn.node3)(dim_in, dim_in))
+        self.cells.append(self.build_conv_model(cfg.nas.node0)(dim_in, dim_in))
+        self.cells.append(self.build_conv_model(cfg.nas.node1)(dim_in, dim_in))
+        self.cells.append(self.build_conv_model(cfg.nas.node2)(dim_in, dim_in))
+        self.cells.append(self.build_conv_model(cfg.nas.node3)(dim_in, dim_in))
 
-        self.node01_act = deepcopy(act_dict[cfg.gnn.node01_act])
-        self.node02_act = deepcopy(act_dict[cfg.gnn.node02_act])
-        self.node03_act = deepcopy(act_dict[cfg.gnn.node03_act])
-        self.node12_act = deepcopy(act_dict[cfg.gnn.node12_act])
-        self.node13_act = deepcopy(act_dict[cfg.gnn.node13_act])
-        self.node23_act = deepcopy(act_dict[cfg.gnn.node23_act]) 
+        self.node01_act = deepcopy(act_dict[cfg.nas.node01_act])
+        self.node02_act = deepcopy(act_dict[cfg.nas.node02_act])
+        self.node03_act = deepcopy(act_dict[cfg.nas.node03_act])
+        self.node12_act = deepcopy(act_dict[cfg.nas.node12_act])
+        self.node13_act = deepcopy(act_dict[cfg.nas.node13_act])
+        self.node23_act = deepcopy(act_dict[cfg.nas.node23_act]) 
 
         self.post_mp = GNNNodeHead(dim_in=dim_in, dim_out=dim_out)
 
