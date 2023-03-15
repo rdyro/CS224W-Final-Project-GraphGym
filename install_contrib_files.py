@@ -4,16 +4,23 @@ import re
 import sys
 import os
 import shutil
-import warnings
 from pathlib import Path
 from subprocess import check_call
+from argparse import ArgumentParser
 
 
-if __name__ == "__main__":
+def install():
+    parser = ArgumentParser()
+    parser.add_argument(
+        "graphgym_path", type=str, help="Path to the GraphGym folder.", default=None, nargs="?"
+    )
+    args = parser.parse_args()
+
     # obtain the graphgym path #####################################################################
-    GRAPHGYM_PATH = os.getenv("GRAPHGYM", None)
+    GRAPHGYM_PATH = args.graphgym_path
     if GRAPHGYM_PATH is None:
-        GRAPHGYM_PATH = Path(input("Please enter the path to the GraphGym folder: ")).absolute()
+        GRAPHGYM_PATH = input("Please enter the path to the GraphGym folder: ")
+    GRAPHGYM_PATH = Path(GRAPHGYM_PATH).absolute()
     if not GRAPHGYM_PATH.exists():
         raise ValueError(f"GraphGym path {GRAPHGYM_PATH} does not exist.")
     if not (GRAPHGYM_PATH / "graphgym").exists():
@@ -43,3 +50,6 @@ if __name__ == "__main__":
 
     # install the modified graphgym ################################################################
     check_call([sys.executable, "-m", "pip", "install", str(GRAPHGYM_PATH)])
+
+if __name__ == "__main__":
+    install()

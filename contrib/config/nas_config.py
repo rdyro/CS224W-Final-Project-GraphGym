@@ -20,12 +20,12 @@ def set_cfg_nas(cfg):
     cfg.nas.node2 = "GCN"
     cfg.nas.node3 = "GCN"
 
-    cfg.nas.node01_act = "tanh"
-    cfg.nas.node02_act = "tanh"
-    cfg.nas.node03_act = "tanh"
-    cfg.nas.node12_act = "tanh"
-    cfg.nas.node13_act = "tanh"
-    cfg.nas.node23_act = "tanh"
+    cfg.nas.node_0_1_act = "tanh"
+    cfg.nas.node_0_2_act = "tanh"
+    cfg.nas.node_0_3_act = "tanh"
+    cfg.nas.node_1_2_act = "tanh"
+    cfg.nas.node_1_3_act = "tanh"
+    cfg.nas.node_2_3_act = "tanh"
 
 
 register_config("nas", set_cfg_nas)
