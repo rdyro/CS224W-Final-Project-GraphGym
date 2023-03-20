@@ -16,10 +16,10 @@ We encourage you to explore our notebooks!
 
 ### Ray Integration
 
-We provide integration of [GraphGym](https://github.com/snap-stanford/GraphGym) with [Ray](https://www.ray.io/ray-core)).
+We provide integration of [GraphGym](https://github.com/snap-stanford/GraphGym) with [Ray](https://www.ray.io/ray-core).
 
 <p align="center">
-<img width=50% src=https://github.com/rdyro/CS224W-Final-Project-GraphGym/blob/main/figures/ray_dashboard.png>
+<img src=https://github.com/rdyro/CS224W-Final-Project-GraphGym/blob/main/figures/ray_dashboard.png>
 </p>
 
 Check out `ray_examply.ipynb`.
