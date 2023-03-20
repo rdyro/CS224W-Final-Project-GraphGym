@@ -10,7 +10,7 @@ We encourage you to explore our notebooks!
 
 - `experiment.ipynb` for the basics and advanced GraphGym usage
 - `analysis.ipynb` for analyzing the results of our GraphGym exploration
-- `ray_examply.ipynb` for integration of GraphGym with [Ray](https://www.ray.io/ray-core).
+- `ray_example.ipynb` for integration of GraphGym with [Ray](https://www.ray.io/ray-core).
 
 ---
 
@@ -22,7 +22,7 @@ We provide integration of [GraphGym](https://github.com/snap-stanford/GraphGym) 
 <img src=https://github.com/rdyro/CS224W-Final-Project-GraphGym/blob/main/figures/ray_dashboard.png>
 </p>
 
-Check out `ray_examply.ipynb`.
+Check out `ray_example.ipynb`.
 
 ---
 
